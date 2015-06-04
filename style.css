@@ -1,0 +1,63 @@
+.grid-container {
+  margin: 0 auto;
+}
+
+.grid-padded {
+  padding: 0 2rem;
+}
+
+.grid-gutters > .grid-row {
+  margin-left: -1rem;
+}
+
+.grid-gutters > .grid-row > .grid-column {
+  padding: 1rem 0 0 1rem;
+}
+
+.grid-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* `display: table` fallback for nevergreen browsers */
+/* It is meant to be used with modernizr */
+/*   which appends the `.no-flexbox` class to the <html> tag */
+
+.no-flexbox .grid-gutters {
+  border-spacing: 1rem 0;
+}
+
+.no-flexbox .grid-gutters > .grid-row {
+  margin-left: 0;
+}
+
+.no-flexbox .grid-gutters > .grid-row > .grid-column {
+  padding: 1rem 0 0 0;
+}
+
+.no-flexbox .grid-row {
+  display: block;
+  width: 100%;
+}
+
+.no-flexbox .grid-column {
+  display: block;
+}
+
+@media only screen and (min-width: 21em) {
+  .no-flexbox .grid-row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  .no-flexbox .grid-column {
+    display: table-cell;
+  }
+}

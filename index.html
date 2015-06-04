@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox grid with display:table Fallback</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #DDD;
+    }
+
+    .box {
+      font-family: sans-serif;
+      color: #EEE;;
+      padding: 3rem;
+      background: #4242BA;
+      border: 1px solid white;
+      text-align: center;
+    }
+
+  </style>
+  <script>
+  /*! modernizr 3.0.0-alpha.3 (Custom Build) | MIT *
+ * http://v3.modernizr.com/download/#-flexbox-addtest !*/
+!function(e,n,t){function o(e,n){return typeof e===n}function r(){var e,n,t,r,i,s,f;for(var l in _){if(e=[],n=_[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,i=0;i<e.length;i++)s=e[i],f=s.split("."),1===f.length?Modernizr[f[0]]=r:(!Modernizr[f[0]]||Modernizr[f[0]]instanceof Boolean||(Modernizr[f[0]]=new Boolean(Modernizr[f[0]])),Modernizr[f[0]][f[1]]=r),g.push((r?"":"no-")+f.join("-"))}}function i(e){var n=x.className,t=Modernizr._config.classPrefix||"";if(Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x.className=n)}function s(e,n){if("object"==typeof e)for(var t in e)w(e,t)&&s(t,e[t]);else{e=e.toLowerCase();var o=e.split("."),r=Modernizr[o[0]];if(2==o.length&&(r=r[o[1]]),"undefined"!=typeof r)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),i([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}function f(e,n){return!!~(""+e).indexOf(n)}function l(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function u(e,n){return function(){return e.apply(n,arguments)}}function a(e,n,t){var r;for(var i in e)if(e[i]in n)return t===!1?e[i]:(r=n[e[i]],o(r,"function")?u(r,t||n):r);return!1}function c(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function d(){var e=n.body;return e||(e=j("body"),e.fake=!0),e}function p(e,n,t,o){var r,i,s,f,l="modernizr",u=j("div"),a=d();if(parseInt(t,10))for(;t--;)s=j("div"),s.id=o?o[t]:l+(t+1),u.appendChild(s);return r=["&#173;",'<style id="s',l,'">',e,"</style>"].join(""),u.id=l,(a.fake?a:u).innerHTML+=r,a.appendChild(u),a.fake&&(a.style.background="",a.style.overflow="hidden",f=x.style.overflow,x.style.overflow="hidden",x.appendChild(a)),i=n(u,e),a.fake?(a.parentNode.removeChild(a),x.style.overflow=f,x.offsetHeight):u.parentNode.removeChild(u),!!i}function m(n,o){var r=n.length;if("CSS"in e&&"supports"in e.CSS){for(;r--;)if(e.CSS.supports(c(n[r]),o))return!0;return!1}if("CSSSupportsRule"in e){for(var i=[];r--;)i.push("("+c(n[r])+":"+o+")");return i=i.join(" or "),p("@supports ("+i+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function h(e,n,r,i){function s(){a&&(delete z.style,delete z.modElem)}if(i=o(i,"undefined")?!1:i,!o(r,"undefined")){var u=m(e,r);if(!o(u,"undefined"))return u}var a,c,d,p,h;for(z.style||(a=!0,z.modElem=j("modernizr"),z.style=z.modElem.style),d=e.length,c=0;d>c;c++)if(p=e[c],h=z.style[p],f(p,"-")&&(p=l(p)),z.style[p]!==t){if(i||o(r,"undefined"))return s(),"pfx"==n?p:!0;try{z.style[p]=r}catch(v){}if(z.style[p]!=h)return s(),"pfx"==n?p:!0}return s(),!1}function v(e,n,t,r,i){var s=e.charAt(0).toUpperCase()+e.slice(1),f=(e+" "+b.join(s+" ")+s).split(" ");return o(n,"string")||o(n,"undefined")?h(f,n,r,i):(f=(e+" "+P.join(s+" ")+s).split(" "),a(f,n,t))}function y(e,n,o){return v(e,t,t,n,o)}var g=[],_=[],C={_version:"3.0.0-alpha.3",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){_.push({name:e,fn:n,options:t})},addAsyncTest:function(e){_.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=C,Modernizr=new Modernizr;var w,x=n.documentElement;!function(){var e={}.hasOwnProperty;w=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,t){return e.call(n,t)}}(),C._l={},C.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},C._trigger=function(e,n){if(this._l[e]){var t=this._l[e];setTimeout(function(){var e,o;for(e=0;e<t.length;e++)(o=t[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){C.addTest=s});var S="Moz O ms Webkit",b=C._config.usePrefixes?S.split(" "):[];C._cssomPrefixes=b;var P=C._config.usePrefixes?S.toLowerCase().split(" "):[];C._domPrefixes=P;var j=function(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):n.createElement.apply(n,arguments)},T={elem:j("modernizr")};Modernizr._q.push(function(){delete T.elem});var z={style:T.elem.style};Modernizr._q.unshift(function(){delete z.style}),C.testAllProps=v,C.testAllProps=y,Modernizr.addTest("flexbox",y("flexBasis","1px",!0)),r(),i(g),delete C.addTest,delete C.addAsyncTest;for(var E=0;E<Modernizr._q.length;E++)Modernizr._q[E]();e.Modernizr=Modernizr}(window,document);
+  </script>
+</head>
+
+<body>
+  <div class="grid-container">
+    <div class="grid-padded grid-gutters">
+      <div class="grid-row">
+        <div class="grid-column">
+          <div class="box">One</div>
+        </div>
+        <div class="grid-column">
+          <div class="box">Two</div>
+        </div>
+        <div class="grid-column">
+          <div class="box">Three</div>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-column">
+          <div class="box">One</div>
+        </div>
+        <div class="grid-column">
+          <div class="box">Two</div>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-column">
+          <div class="box">One</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
