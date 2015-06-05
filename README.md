@@ -16,7 +16,7 @@ Or worse
 ```
 .no-flexbox .grid-gutters > .grid-row > .grid-colum
 ```
-but, [modernizr](http://v3.modernizr.com) works this way and this approach requires the least amount of additional classes in the DOM.
+but, this approach requires the least amount of additional classes in the DOM.
 Again it is an illustration of what is required to make a flexbox based grid fallback to  table based one.
 
 Discuss.
