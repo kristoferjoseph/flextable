@@ -26,7 +26,7 @@
 }
 
 /* `display: table` fallback for nevergreen browsers */
-/* It is meant to be used with modernizr */
+/* It is meant to be used with JS in the page */
 /*   which appends the `.no-flexbox` class to the <html> tag */
 
 .no-flexbox .grid-gutters {
